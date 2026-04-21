@@ -1,289 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>M.I.L.E. Workshop | RO-MAN 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OlivetoNuovo | Sicilian Restoration Project</title>
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --primary-brown: #a3645c;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-white: #ffffff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Arial', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin: 0 15px;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a.active {
+            background-color: var(--primary-brown);
+            color: white;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+                        url('hero-landscape.jpg') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; }
+
+        /* --- Experience Grid --- */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 10px;
+            color: var(--primary-brown);
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: var(--text-light);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .card h3 {
+            color: var(--primary-brown);
+            margin: 15px 0 5px;
+        }
+
+        .btn-more {
+            display: inline-block;
+            background-color: var(--primary-brown);
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .center-btn { text-align: center; margin-bottom: 60px; }
+
+        /* --- Testimonial --- */
+        .testimonial {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .testimonial blockquote {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+            color: var(--primary-brown);
+            font-style: italic;
+        }
+
+        .testimonial cite {
+            display: block;
+            margin-top: 20px;
+            font-style: normal;
+            color: var(--text-light);
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 60px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-img { flex: 1; min-width: 300px; }
+        .footer-img img { width: 100%; border-radius: 4px; }
+
+        .footer-info { flex: 1; min-width: 300px; }
+        .footer-info h4 { margin-bottom: 5px; color: var(--text-light); }
+        .footer-info p, .footer-info a { color: var(--primary-brown); text-decoration: none; margin-bottom: 20px; display: block; }
+
+        .social-icon img { width: 30px; }
+
+    </style>
 </head>
 <body>
 
-  <nav>
-    <div class="nav-inner">
-      <div class="logo-wrap">
-  <span class="logo-text">M.I.L.E. 2026</span>
-  <img src="images/roman-logo.png" alt="RO-MAN 2026 logo" class="conf-logo">
-</div>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="organizers.html">Organizers</a></li>
-        <li><a href="call-for-papers.html">Call for Papers</a></li>
-        <li><a href="venue.html">Venue</a></li>
-      </ul>
-    </div>
-  </nav>
+    <header>
+        <div class="logo">OlivetoNuovo</div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">Guest House</a>
+        </nav>
+    </header>
 
-  <header class="hero-header">
-    <div class="hero">
-      <span class="hero-badge">Workshop at IEEE RO-MAN 2026</span>
-      <h1>M.I.L.E.</h1>
-      <p class="subtitle">
-        Misaligned Interaction and Learning Engagement
-        Strategies for Human–Robot Coordination under Partial Alignment,
-        Uncertainty, and Conflicting Goals
-      </p>
-      <p class="hero-meta">August 24–28, 2026 · Kitakyushu, Japan</p>
+    <section class="hero">
+        <h2>Welcome to OlivetoNuovo</h2>
+        <p>OlivetoNuovo is a restoration project of an ancient olive grove destroyed by fire.</p>
+        <p>We are giving new life to a Sicilian Hill in Makari and a family's dream.</p>
+    </section>
 
-      <div class="hero-actions">
-        <a href="call-for-papers.html" class="btn btn-primary">Call for Papers</a>
-        <a href="organizers.html" class="btn btn-secondary">Meet the Organizers</a>
-      </div>
-    </div>
-  </header>
+    <main class="container">
+        <h2 class="section-title">OlivetoNuovo Experience</h2>
+        <p class="section-subtitle">OlivetoNuovo is a travel at the heart of Sicily to have a unique ecotourism experience in the village of Makari.</p>
 
-<section>
-  <div class="container">
-    <div class="section-header">
-      <h2>About the Workshop</h2>
-    </div>
-
-    <div class="card-panel lead">
-
-      <p>
-        Human–robot interaction has traditionally focused on settings where humans and robots share a common goal and operate under the assumption of cooperation. While this paradigm has enabled major progress in assistive robotics, collaborative manipulation, and shared autonomy, it often abstracts away from the complexity of real-world interaction.
-      </p>
-
-      <p>
-        In natural environments, alignment between humans and robots is frequently incomplete, uncertain, or dynamically changing. Humans may not fully trust, understand, or adapt to robotic behavior, and robots may misinterpret human intent, fail to predict subtle behavioral cues, or operate under conflicting objectives. These forms of partial alignment introduce rich but underexplored challenges for perception, planning, and learning.
-      </p>
-
-      <p>
-        The M.I.L.E. workshop (Misaligned Interaction and Learning Engagement Strategies) aims to bring together researchers working at the intersection of robotics, machine learning, cognitive modeling, and human factors to study these challenges in a unified way. We are particularly interested in how misalignment emerges, how it can be detected and modeled online, and how adaptive systems can respond to it in a principled manner.
-      </p>
-
-      <p>
-        Topics of interest include, but are not limited to: intention inference under uncertainty, human-aware planning in non-cooperative settings, learning from ambiguous or conflicting feedback, modeling human engagement and disengagement, multi-agent miscoordination, and safety in partially aligned systems.
-      </p>
-
-      <p>
-        Beyond technical advances, M.I.L.E. also emphasizes conceptual and interdisciplinary perspectives on interaction, including cognitive science, social psychology, and theories of cooperation and conflict in human–robot teams.
-      </p>
-
-      <p>
-        By fostering discussion across these communities, the workshop aims to establish a shared foundation for studying misalignment not as an edge case, but as a fundamental property of real-world human–robot interaction.
-      </p>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================== INVITED SPEAKERS ===================== -->
-<section class="section-light">
-  <div class="container">
-    <div class="section-header">
-      <h2>Invited Speakers</h2>
-      <p>
-        The workshop features internationally recognized researchers in HRI, adaptive autonomy,
-        intention modeling, and human-aware decision-making.
-      </p>
-    </div>
-
-    <div class="speaker-list">
-
-      <!-- Speaker 2 -->
-      <div class="speaker-item">
-        <div class="speaker-photo">
-          <img src="images/speakers/hiroshi-ishiguro.jpg" alt="Hiroshi Ishiguro">
+        <div class="grid">
+            <div class="card">
+                <img src="burned-grove.jpg" alt="Charred olive tree in 2020">
+                <h3>2020</h3>
+                <p>A fire caused by arson go wild and destroy our olive grove. Makari olive grove was made by our grandfather in the '60 down by Zingaro Natural Reserve.</p>
+            </div>
+            <div class="card">
+                <img src="restored-grove.jpg" alt="Restored olive grove 2025">
+                <h3>2025</h3>
+                <p>Since 2021, we have been working with family, friends, and volunteers to recover the hill, create a special area for preservation, and cultivate olives agroecologically.</p>
+            </div>
         </div>
-        <div class="speaker-text">
-          <h3>Hiroshi Ishiguro</h3>
-          <p>Hiroshi Ishiguro is a preeminent robotics researcher and Director of the Intelligent Robotics Laboratory at Osaka University, Japan. His work focuses on android science, human–robot interaction, and the broader implications of artificial intelligence. He is widely known for pioneering lifelike androids, including Geminoid robots such as a robotic replica of himself, which have reshaped how researchers think about the boundaries between humans and machines. Through his research and public engagement, he continues to explore questions of human identity and the future relationship between humans and robots.</p>
+        <div class="center-btn"><a href="#" class="btn-more">More info</a></div>
+
+        <div class="grid">
+            <div class="card">
+                <img src="construction.jpg" alt="Guest house under construction">
+                <h3>Guest House under construction</h3>
+                <p>We put a lot of effort into building OlivetoNuovo's guest house with the support of our friends and family. This distinctive location was created by local craftspeople.</p>
+            </div>
+            <div class="card">
+                <img src="finished-house.jpg" alt="Finished Guest House">
+                <h3>Guest House OlivetoNuovo</h3>
+                <p>At last, the flat is prepared to receive visitors and friends. A peaceful retreat overlooking the Mediterranean.</p>
+            </div>
         </div>
-      </div>
+        <div class="center-btn"><a href="#" class="btn-more">More info</a></div>
+    </main>
 
-      <!-- Speaker 3 -->
-      <div class="speaker-item">
-        <div class="speaker-photo">
-          <img src="images/speakers/yukie-nagai.jpg" alt="Yukie Nagai">
+    <section class="testimonial">
+        <blockquote>
+            “My experience at OlivetoNuovo was life-changing. Connecting with nature in such an authentic way and seeing their commitment to sustainability inspired me deeply”
+        </blockquote>
+        <cite>Dario</cite>
+    </section>
+
+    <footer class="container">
+        <div class="footer-img">
+            <img src="footer-landscape.jpg" alt="Landscape of Makari">
         </div>
-        <div class="speaker-text">
-          <h3>Yukie Nagai</h3>
-          <p>Yukie Nagai is a Project Professor at the University of Tokyo’s International Research Center for Neurointelligence, where she leads the Cognitive Developmental Robotics Lab. Her research focuses on cognitive developmental robotics and computational neuroscience, with an emphasis on understanding the mechanisms underlying social cognitive development and supporting developmental disorders. She has contributed to major JST CREST projects and has received international recognition for her work in robotics and AI.</p>
+        <div class="footer-info">
+            <h4>Where we are</h4>
+            <a href="https://maps.google.com" target="_blank">Via Timpone 64, Makari - San Vito Lo Capo (TP), Italy</a>
+
+            <h4>Contact</h4>
+            <p>giorgiobarbato.project@gmail.com</p>
+
+            <h4>Social Network</h4>
+            <div class="social-icon">
+                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+            </div>
         </div>
-      </div>
-
-      <!-- Speaker 7 -->
-      <div class="speaker-item">
-        <div class="speaker-photo">
-          <img src="images/speakers/friederike-eyssel.jpg" alt="Friederike Eyssel">
-        </div>
-        <div class="speaker-text">
-          <h3>Friederike Eyssel</h3>
-          <p>Friederike Eyssel is Professor of Psychology and head of the “Applied Social Psychology and Gender Research” group at the Center for Cognitive Interaction Technology (CITEC), Bielefeld University. Her research focuses on social robotics, trust, acceptance of emerging technologies, and attitude change, combining basic and applied social psychological perspectives. She has contributed to several EU- and nationally funded projects and is co-author of key textbooks in human–robot interaction and social robotics. She also serves in editorial roles for leading robotics and HRI journals and has received multiple awards for her research, teaching, and contributions to gender equality in science.</p>
-        </div>
-      </div>
-
-      <!-- Speaker 5 -->
-      <div class="speaker-item">
-        <div class="speaker-photo">
-          <img src="images/speakers/tatsuya-nomura.jpg" alt="Tatsuya Nomura">
-        </div>
-        <div class="speaker-text">
-          <h3>Tatsuya Nomura</h3>
-          <p>Tatsuya Nomura is an Associate Professor in the Department of Media Informatics at Ryukoku University, Japan, and a researcher in the Advanced Technology and Research Intelligent Robotics and Communication Laboratories. His research focuses on human–robot interaction and intelligent robotics, with an emphasis on psychological and cognitive aspects of human responses to robots. Prior to his academic career, he worked in industrial research at Sharp Corporation. He is a member of several academic societies, including IEEE, the Japanese Psychological Association, and the Japanese Cognitive Science Society.</p>
-        </div>
-      </div>
-
-      <!-- Speaker 4 -->
-      <div class="speaker-item">
-        <div class="speaker-photo">
-          <img src="images/speakers/heramb-nemlekar.jpg" alt="Heramb Nemlekar">
-        </div>
-        <div class="speaker-text">
-          <h3>Heramb Nemlekar</h3>
-          <p>Heramb Nemlekar is an Assistant Professor in the Department of Mechanical Engineering at California State University, Northridge (CSUN), where he leads the Collaborative & Autonomous Robotics Research (CARE) Lab. His research focuses on human–robot interaction and robot learning from human feedback, with applications in assistive robotics, healthcare, and manufacturing. He develops learning-based methods and interaction interfaces that enable intuitive collaboration between humans and robotic systems.</p>
-        </div>
-      </div>
-
-
-      <!-- Speaker 1 -->
-      <div class="speaker-item">
-        <div class="speaker-photo">
-          <img src="images/speakers/sarah-gillet.jpg" alt="Sarah Gillet">
-        </div>
-        <div class="speaker-text">
-          <h3>Sarah Gillet</h3>
-          <p>Sarah Gillet develops autonomous social robots that aim to meaningfully enhance and enrich human–human interaction. Her research combines real-world user studies with computational and learning-based approaches to design systems that are not only technically robust, but also deeply grounded in human social needs and experiences.</p>
-        </div>
-      </div>
-
-      <!-- Speaker 6 -->
-      <div class="speaker-item">
-        <div class="speaker-photo">
-          <img src="images/speakers/hashini-senaratne.jpg" alt="Hashini Senaratne">
-        </div>
-        <div class="speaker-text">
-          <h3>Hashini Senaratne</h3>
-          <p>Hashini Senaratne is a Research Scientist in the Robotics and Autonomous Systems program at CSIRO, Australia. Her work focuses on human-centered robotics and AI, with an emphasis on natural, safe, and explainable human–robot interaction. She develops multimodal and adaptive systems that support effective collaboration in human–robot teams, including interfaces that help maintain human situational awareness during shared tasks. She received her PhD in Human-Centered Computing and Artificial Intelligence from Monash University, where her research explored multimodal detection of anxiety patterns to inform intelligent assistive technologies.</p>
-        </div>
-      </div>
-
-
-
-    </div>
-  </div>
-</section>
-<!-- ===================== TENTATIVE PROGRAM ===================== -->
-<section>
-  <div class="container">
-    <div class="section-header">
-      <h2>Tentative Program</h2>
-      <p>Full-day schedule designed to maximize interaction, discussion, and feedback.</p>
-    </div>
-
-    <div class="card-panel">
-
-      <ul class="program-list">
-
-        <li>
-          <strong>09:00 – 09:30 · Opening Session</strong>
-          <ul>
-            <li>Welcome and introduction</li>
-            <li>Overview of misalignment and adaptation challenges</li>
-            <li>Framing key scientific questions</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>09:30 – 11:00 · Block 1: Invited Talks & Papers</strong>
-          <ul>
-            <li>Invited speakers present state-of-the-art approaches</li>
-            <li>Oral presentations of selected accepted papers</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>11:00 – 12:00 · Poster & Spotlight Session (Part 1)</strong>
-          <ul>
-            <li>2–3 minute spotlight presentations per paper</li>
-            <li>Poster session with interactive discussion</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>12:00 – 12:30 · Coffee Break</strong>
-        </li>
-
-        <li>
-          <strong>12:30 – 14:00 · Block 2: Invited Talks & Papers</strong>
-          <ul>
-            <li>Continuation of invited talks and presentations</li>
-            <li>Oral presentations of selected papers</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>14:00 – 15:30 · Lunch Break</strong>
-        </li>
-
-        <li>
-          <strong>15:30 – 16:30 · Poster & Spotlight Session (Part 2)</strong>
-          <ul>
-            <li>Second round of spotlight presentations</li>
-            <li>Extended poster interaction session</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>16:30 – 17:00 · Coffee Break</strong>
-        </li>
-
-        <li>
-          <strong>17:00 – 18:00 · Plenary Discussion</strong>
-          <ul>
-            <li>Open research challenges</li>
-            <li>Benchmarks and evaluation metrics</li>
-            <li>Future collaboration opportunities</li>
-          </ul>
-        </li>
-
-        <li>
-          <strong>18:00 – 18:15 · Closing Session</strong>
-          <ul>
-            <li>Final remarks and conclusions</li>
-          </ul>
-        </li>
-
-      </ul>
-
-    </div>
-  </div>
-</section>
-<!-- ===================== ACKNOWLEDGMENTS ===================== -->
-<section class="section-light">
-  <div class="container">
-    <div class="section-header">
-      <h2>Acknowledgments</h2>
-      <p>
-        We gratefully acknowledge the support of the following institutions and projects.
-      </p>
-    </div>
-
-    <div class="ack-logos">
-
-      <!-- Replace with your actual logos -->
-      <img src="images/logos/ack.jpg" alt="IRI Logo">
-
-    </div>
-
-  </div>
-</section>
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 M.I.L.E. Workshop · IEEE RO-MAN 2026</p>
-    </div>
-  </footer>
+    </footer>
 
 </body>
 </html>
