@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest House | OlivetoNuovo</title>
+    <style>
+        /* --- General Styles --- */
+        :root {
+            --primary-brown: #a3645c;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-white: #ffffff;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Arial', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            margin: 0 15px;
+            padding: 8px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a.active {
+            background-color: var(--primary-brown);
+            color: white;
+        }
+
+        /* --- Content Styles --- */
+        .intro-text {
+            margin: 40px 0 30px;
+            color: var(--text-light);
+            font-size: 1.05rem;
+        }
+
+        .intro-text p {
+            margin-bottom: 20px;
+        }
+
+        /* --- Image Slider Styles --- */
+        .slider-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 550px;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Nav Buttons */
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            color: var(--text-dark);
+            border: none;
+            width: 45px;
+            height: 45px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+        }
+
+        .slider-btn:hover {
+            background-color: var(--primary-brown);
+            color: white;
+        }
+
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        /* Dots Indicator */
+        .dots-container {
+            text-align: center;
+            margin-top: -40px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .dot.active, .dot:hover {
+            background-color: white;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .slider { height: 350px; }
+            .slider-btn { width: 35px; height: 35px; font-size: 1.2rem; }
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 60px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer-img { flex: 1; min-width: 300px; }
+        .footer-img img { width: 100%; border-radius: 4px; }
+
+        .footer-info { flex: 1; min-width: 300px; }
+        .footer-info h4 { margin-bottom: 5px; color: var(--text-light); }
+        .footer-info p, .footer-info a { color: var(--primary-brown); text-decoration: none; margin-bottom: 20px; display: block; }
+
+        .social-icon img { width: 30px; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">OlivetoNuovo</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Guest House</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="intro-text">
+            <p>For a single individual or a couple who wish to visit Makari and support our efforts, the Guest House is perfect.</p>
+            <p>For further information and facts on staying at Oliveto Nuovo Guest House, please send a WhatsApp message to +39347905541.</p>
+            <p>Long-term visits are also appreciated.</p>
+        </section>
+
+        <!-- Image Slider Container -->
+        <section class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide"><img src="images/img_terrace.jpeg" alt="Terrace"></div>
+                <div class="slide"><img src="images/img_terrace2.jpeg" alt="Terrace View 2"></div>
+                <div class="slide"><img src="images/img_bathroom.jpeg" alt="Bathroom"></div>
+                <div class="slide"><img src="images/img_landscape.jpeg" alt="Landscape Overview"></div>
+                <div class="slide"><img src="images/img_landscape_coast.jpeg" alt="Landscape Coastline"></div>
+                <div class="slide"><img src="images/img_sala.jpeg" alt="Living Room Sofa"></div>
+                <div class="slide"><img src="images/img_sala2.jpeg" alt="Living Room Wide View"></div>
+                <div class="slide"><img src="images/img_window.jpeg" alt="Window Mountain View"></div>
+                <div class="slide"><img src="images/img_window2.jpeg" alt="Window Sea View Reflection"></div>
+                <div class="slide"><img src="images/img_balcony.jpeg" alt="Balcony view over trees"></div>
+            </div>
+
+            <!-- Slider Navigation Buttons -->
+            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+
+        <!-- Dots Indicator Navigation -->
+        <div class="dots-container" id="dotsContainer"></div>
+    </main>
+
+    <footer class="container">
+        <div class="footer-img">
+            <img src="images/img_banner_basso.JPG" alt="Landscape of Makari">
+        </div>
+        <div class="footer-info">
+            <h4>Where we are</h4>
+<a href="https://www.google.com/maps/search/?api=1&query=Via+Timpone+64,+Makari+-+San+Vito+Lo+Capo+(TP),+Italy" target="_blank">Via Timpone 64, Makari - San Vito Lo Capo (TP), Italy</a>
+
+<h4>Contact</h4>
+<p><a href="mailto:giorgiobarbato.project@gmail.com" style="color: var(--primary-brown); text-decoration: none;">giorgiobarbato.project@gmail.com</a></p>
+
+            <h4>Social Network</h4>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/olivetonuovomakari?igsh=MXFncjllenlxNmVwdA%3D%3D&utm_source=qr"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Functionality Script -->
+    <script>
+        let currentSlide = 0;
+        const slider = document.getElementById('slider');
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const dotsContainer = document.getElementById('dotsContainer');
+
+        // Dynamically create navigation dots
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('onclick', `currentSlideTo(${i})`);
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSliderPosition() {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlide].classList.add('active');
+        }
+
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            }
+            updateSliderPosition();
+        }
+
+        function currentSlideTo(index) {
+            currentSlide = index;
+            updateSliderPosition();
+        }
+
+        // Optional: Auto-play slider every 5 seconds
+        //setInterval(() => {
+        //    moveSlide(1);
+        //}, 8000);
+    </script>
+</body>
+</html>
